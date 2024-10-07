@@ -4,343 +4,823 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xiangrui (Jerry) Zhao - Resume</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS for Animations -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <style>
+        /* CSS Variables for Light and Dark Themes */
+        :root {
+            --bg-color: #f8f9fa;
+            --text-color: #343a40;
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --card-bg: #ffffff;
+            --footer-bg: #ffffff;
+            --button-bg: #007bff;
+            --button-hover-bg: #0056b3;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --primary-color: #bb86fc;
+            --secondary-color: #b0bec5;
+            --card-bg: #1e1e1e;
+            --footer-bg: #1e1e1e;
+            --button-bg: #bb86fc;
+            --button-hover-bg: #985eff;
+        }
+
+        /* General Styles */
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f8f9fa;
+            background-color: var(--bg-color);
             overflow-x: hidden;
+            color: var(--text-color);
+            scroll-behavior: smooth;
+            transition: background-color 0.3s, color 0.3s;
         }
         .main-container {
             max-width: 1100px;
-            margin: auto;
-            padding: 30px;
+            margin: 80px auto 40px; /* Adjusted for fixed navbar */
+            padding: 20px;
         }
+        /* Navbar Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: var(--bg-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: background-color 0.3s;
+        }
+        .navbar .nav-link {
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .navbar .nav-link:hover {
+            color: var(--primary-color);
+        }
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        /* Dark Mode Toggle */
+        .theme-toggle {
+            cursor: pointer;
+            color: var(--text-color);
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        .theme-toggle:hover {
+            color: var(--primary-color);
+        }
+        /* Header Section */
         .header {
             text-align: center;
-            padding-bottom: 40px;
+            margin-bottom: 30px;
         }
         .header h1 {
             font-weight: 700;
-            margin-bottom: 10px;
-            animation: fadeInDown 1s ease-in-out;
+            margin-bottom: 15px;
+            font-size: 2.5rem;
+            white-space: nowrap;
+            animation: fadeInDown 1s ease-out;
+        }
+        .social-icons {
+            margin-bottom: 15px;
+            animation: fadeInUp 1s ease-out;
+        }
+        .social-icons a {
+            color: var(--secondary-color);
+            margin: 0 12px;
+            font-size: 1.8rem;
+            transition: color 0.3s, transform 0.3s;
+        }
+        .social-icons a:hover {
+            color: var(--primary-color);
+            transform: scale(1.2);
         }
         .header p {
             font-size: 1.2rem;
-            color: #6c757d;
-            transition: color 0.3s ease;
+            color: var(--secondary-color);
+            font-weight: 500;
+            animation: fadeInUp 1.2s ease-out;
         }
-        .header p:hover {
-            color: #007bff;
-            cursor: pointer;
-        }
+        /* Info Cards */
         .info-card {
-            background: #ffffff;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            position: relative;
-            overflow: hidden;
-            animation: fadeInUp 1s ease-in-out;
+            background: var(--card-bg);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            animation: fadeInUp 1s ease-out;
+            transition: background-color 0.3s, box-shadow 0.3s;
         }
         .info-card h3 {
-            font-weight: 500;
+            font-weight: 600;
+            margin-bottom: 20px;
             position: relative;
+            display: inline-block;
+            scroll-margin-top: 100px; /* Adjust according to navbar height */
         }
         .info-card h3::after {
             content: '';
             position: absolute;
             left: 0;
             bottom: -5px;
-            width: 0;
-            height: 3px;
-            background: #007bff;
-            transition: width 0.3s ease;
-        }
-        .info-card h3:hover::after {
             width: 100%;
+            height: 3px;
+            background: var(--primary-color);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 1s ease;
         }
+        .info-card h3.aos-animate::after {
+            transform: scaleX(1.2);
+        }
+        /* Skills Section */
         .skills ul {
-            list-style-type: none;
+            list-style: none;
             padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
         .skills ul li {
             background: #e9ecef;
-            display: inline-block;
-            padding: 10px;
-            margin: 5px;
-            border-radius: 4px;
+            padding: 8px 14px;
+            border-radius: 20px;
             font-weight: 500;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s, background 0.3s, color 0.3s;
+            cursor: default;
         }
         .skills ul li:hover {
             transform: scale(1.1);
-            background: #007bff;
+            background: var(--primary-color);
             color: #fff;
         }
-        .timeline {
-            border-left: 4px solid #007bff;
-            margin-left: 30px;
-            padding-left: 20px;
-            position: relative;
+        /* Contact Links */
+        .contact-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
         }
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: -34px;
-            top: 0;
-            bottom: 0;
-            width: 8px;
-            background: linear-gradient(180deg, #007bff, #6c757d);
-            animation: gradientMove 3s infinite linear;
-        }
-        .timeline-item {
-            margin-bottom: 20px;
-            position: relative;
-            animation: fadeInUp 1.2s ease-in-out;
-        }
-        .timeline-item::before {
-            content: "";
-            position: absolute;
-            left: -32px;
-            top: 0;
-            width: 20px;
-            height: 20px;
-            background: #007bff;
-            border-radius: 50%;
-            box-shadow: 0 0 10px rgba(0,123,255,0.5);
-        }
-        .timeline-item h5 {
-            transition: color 0.3s ease;
-        }
-        .timeline-item h5:hover {
-            color: #007bff;
-        }
-        .details-summary {
-            display: inline-block;
-            cursor: pointer;
-            font-weight: 500;
-            color: #007bff;
-        }
-        .details-summary:hover {
+        .contact-links a:hover {
+            color: var(--secondary-color);
             text-decoration: underline;
         }
-        .details-content {
+        /* Back-to-Top Button */
+        #backToTop {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
             display: none;
-            margin-top: 10px;
-            background: #f1f1f1;
-            padding: 10px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: background-color 0.3s, transform 0.3s;
+            z-index: 1000;
+        }
+        #backToTop:hover {
+            background-color: var(--button-hover-bg);
+            transform: scale(1.1);
+        }
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--footer-bg);
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+            margin-top: 40px;
+            transition: background-color 0.3s;
+        }
+        /* Portfolio Section */
+        .portfolio-container {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding-bottom: 20px;
+            scroll-snap-type: x mandatory;
+        }
+        .portfolio-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        .portfolio-container::-webkit-scrollbar-thumb {
+            background-color: var(--primary-color);
             border-radius: 4px;
         }
-        .details-summary:hover + .details-content {
-            display: block;
-            animation: fadeInUp 0.5s ease-in-out;
+        .portfolio-card {
+            flex: 0 0 22%; /* Approximately 4.5 cards visible */
+            background: var(--card-bg);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-radius: 10px;
+            scroll-snap-align: start;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            max-height: 350px; /* Adjust as needed */
         }
+        .portfolio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .portfolio-card iframe, .portfolio-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .portfolio-card img {
+            /* Ensure images fit well */
+            max-height: 150px;
+            width: 100%;
+        }
+        .portfolio-card .card-body {
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .portfolio-card h5 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            flex-grow: 0;
+        }
+        .portfolio-card p {
+            font-size: 0.9rem;
+            flex-grow: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3; /* Number of lines to show */
+            -webkit-box-orient: vertical;
+        }
+        .portfolio-card a {
+            margin-top: 10px;
+            align-self: flex-start;
+            font-size: 0.9rem;
+        }
+        /* Animations */
         @keyframes fadeInDown {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Dark Mode Toggle Button */
+        .theme-toggle {
+            margin-left: 15px;
+        }
+        /* Responsive Adjustments */
+        @media (max-width: 1200px) {
+            .portfolio-card {
+                flex: 0 0 28%; /* Approximately 3.5 cards visible */
             }
         }
-        @keyframes gradientMove {
-            0% {
-                background-position: 0% 50%;
+        @media (max-width: 992px) {
+            .portfolio-card {
+                flex: 0 0 35%; /* Approximately 2.8 cards visible */
             }
-            100% {
-                background-position: 100% 50%;
+        }
+        @media (max-width: 768px) {
+            .portfolio-card {
+                flex: 0 0 45%; /* Approximately 2.2 cards visible */
+            }
+            .portfolio-container {
+                gap: 15px;
+            }
+        }
+        @media (max-width: 576px) {
+            .portfolio-card {
+                flex: 0 0 90%; /* 1 card visible */
             }
         }
     </style>
 </head>
-<body>
+<body data-theme="light">
 
-<div class="main-container">
-    <div class="header">
-        <h1>Xiangrui (Jerry) Zhao</h1>
-        <p>Software Engineer | Machine Learning Enthusiast | Innovator</p>
-    </div>
+    <!-- Fixed Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Jerry Zhao</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-header">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#work-header">Work Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education-header">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills-header">Technical Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#research-header">Research Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects-header">Academic Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio-header">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-header">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link theme-toggle" id="theme-toggle" role="button" aria-label="Toggle Dark Mode">
+                            <i class="fas fa-moon"></i>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <div class="info-card">
-        <h3><i class="fas fa-user"></i> About Me</h3>
-        <p>I am a passionate software engineer with a strong background in machine learning, data analysis, and innovative technology development. I am motivated to create impactful solutions through coding and research, continuously pushing the boundaries of what is possible with technology.</p>
-    </div>
+    <div class="main-container">
+        <!-- Header Section -->
+        <section class="header" id="header">
+            <h1 data-aos="fade-in">Xiangrui (Jerry) Zhao</h1>
+            <div class="social-icons">
+                <a href="https://github.com/jerryzhao173985" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/jerryzhao173985" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/jerryzhao173985" target="_blank" aria-label="X/Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://blog.csdn.net/jerry173985" target="_blank" aria-label="CSDN"><i class="fas fa-blog"></i></a>
+                <a href="http://0406.medium.com" target="_blank" aria-label="Medium"><i class="fab fa-medium"></i></a>
+                <a href="https://www.youtube.com/@jerry_zhao" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com/jerry.zhao.3194" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.youtube.com/watch?v=adQRJWyv7Ss" target="_blank" aria-label="Robotics C++ Project Demo"><i class="fas fa-robot"></i></a>
+            </div>
+            <p>Software Engineer | Machine Learning Enthusiast | Innovator</p>
+        </section>
 
-    <div class="info-card">
-        <h3><i class="fas fa-briefcase"></i> Work Experience</h3>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h5>Software Engineer II - Cadence Design Systems</h5>
-                <span>May 2023 - Present</span>
-                <div class="details-summary">View Details</div>
-                <div class="details-content">
-                    <p>Developed and maintained software validation tools for complex Process Design Kits (PDKs) in Cadence Virtuoso using C++ and SKILL, enhancing IC design processes by ensuring high-quality PDK validation and migration through robust, integrated solutions within the design environment.</p>
-                    <p>Enhanced tool performance and customer experience by creating user-friendly UI features, streamlining batch operations with foundational APIs, and implementing robust testing frameworks; resolved critical customer-reported issues, increasing efficiency and reducing errors.</p>
-                    <p>Leveraged AI, machine learning, and data-driven methods to generalize PDK validation systems and automate PCell code generation, resulting in reduced test patterns and faster quality analysis without compromising overall quality.</p>
-                    <p>Collaborated closely with customers to implement product enhancements and fix development bugs; aligned system designs with customer needs, improved software quality and maintainability, and addressed challenges in PDK migration and readiness across various Cadence Virtuoso products.</p>
+        <!-- About Me -->
+        <section class="info-card" id="about">
+            <h3 id="about-header" data-aos="fade-up">About Me</h3>
+            <p>I am a passionate software engineer with a strong background in machine learning, data analysis, and innovative technology development. I am motivated to create impactful solutions through coding and research, continuously pushing the boundaries of what is possible with technology.</p>
+        </section>
+
+        <!-- Work Experience -->
+        <section class="info-card" id="work">
+            <h3 id="work-header" data-aos="fade-up">Work Experience</h3>
+            <div class="accordion" id="workExperienceAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="workHeading1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#workCollapse1" aria-expanded="false" aria-controls="workCollapse1">
+                            Software Engineer II - Cadence Design Systems
+                            <span class="ms-2 text-muted" style="font-size: 0.9rem;">May 2023 - Present</span>
+                        </button>
+                    </h2>
+                    <div id="workCollapse1" class="accordion-collapse collapse" aria-labelledby="workHeading1" data-bs-parent="#workExperienceAccordion">
+                        <div class="accordion-body">
+                            <p>Developed and maintained software validation tools for complex Process Design Kits (PDKs) in Cadence Virtuoso using C++ and SKILL, enhancing IC design processes by ensuring high-quality PDK validation and migration through robust, integrated solutions within the design environment.</p>
+                            <p>Enhanced tool performance and customer experience by creating user-friendly UI features, streamlining batch operations with foundational APIs, and implementing robust testing frameworks; resolved critical customer-reported issues, increasing efficiency and reducing errors.</p>
+                            <p>Leveraged AI, machine learning, and data-driven methods to generalize PDK validation systems and automate PCell code generation, resulting in reduced test patterns and faster quality analysis without compromising overall quality.</p>
+                            <p>Collaborated closely with customers to implement product enhancements and fix development bugs; aligned system designs with customer needs, improved software quality and maintainability, and addressed challenges in PDK migration and readiness across various Cadence Virtuoso products.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="workHeading2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#workCollapse2" aria-expanded="false" aria-controls="workCollapse2">
+                            Machine Learning Intern - Zonda
+                            <span class="ms-2 text-muted" style="font-size: 0.9rem;">Feb 2023 - May 2023</span>
+                        </button>
+                    </h2>
+                    <div id="workCollapse2" class="accordion-collapse collapse" aria-labelledby="workHeading2" data-bs-parent="#workExperienceAccordion">
+                        <div class="accordion-body">
+                            <p>Developed high-fidelity text-to-3D object generation models using GANs and Stable Diffusion. Implemented and optimized state-of-the-art diffusion-based neural network to generate accurate, textured 3D objects from text and images.</p>
+                            <p>Integrated advanced techniques from Stable-Dreamfusion, ControlNet, OpenAI's Point-E, and Pixel2Mesh models to enhance performance and output quality.</p>
+                            <p>Optimized training efficiency and model convergence through hyperparameter tuning using custom accuracy metrics. Resolved instability issues by employing prompt engineering techniques with ChatGPT to design effective text prompts, leading to faster inference times and more accurate results.</p>
+                            <p>Developed a web interface for 3D object generation using AWS EC2 and integrated cloud storage with S3. Deployed models on AWS SageMaker using Docker containers and custom training scripts, automating resource allocation and training pipelines, which streamlined the workflow and improved scalability.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="timeline-item">
-                <h5>Machine Learning Intern - Zonda</h5>
-                <span>Feb 2023 - May 2023</span>
-                <div class="details-summary">View Details</div>
-                <div class="details-content">
-                    <p>Developed high-fidelity text-to-3D object generation models using GANs and Stable Diffusion. Implemented and optimized state-of-the-art diffusion-based neural network to generate accurate, textured 3D objects from text and images.</p>
-                    <p>Integrated advanced techniques from Stable-Dreamfusion, ControlNet, OpenAI's Point-E, and Pixel2Mesh models to enhance performance and output quality.</p>
-                    <p>Optimized training efficiency and model convergence through hyperparameter tuning using custom accuracy metrics. Resolved instability issues by employing prompt engineering techniques with ChatGPT to design effective text prompts, leading to faster inference times and more accurate results.</p>
-                    <p>Developed a web interface for 3D object generation using AWS EC2 and integrated cloud storage with S3. Deployed models on AWS SageMaker using Docker containers and custom training scripts, automating resource allocation and training pipelines, which streamlined the workflow and improved scalability.</p>
+        </section>
+
+        <!-- Education -->
+        <section class="info-card" id="education">
+            <h3 id="education-header" data-aos="fade-up">Education</h3>
+            <div class="accordion" id="educationAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="eduHeading1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#eduCollapse1" aria-expanded="false" aria-controls="eduCollapse1">
+                            Master of Informatics with Honours (Integrated Master) - University of Edinburgh
+                            <span class="ms-2 text-muted" style="font-size: 0.9rem;">Sep 2018 - May 2022</span>
+                        </button>
+                    </h2>
+                    <div id="eduCollapse1" class="accordion-collapse collapse" aria-labelledby="eduHeading1" data-bs-parent="#educationAccordion">
+                        <div class="accordion-body">
+                            <p>Academic Accolades: 2:1</p>
+                            <p>Core courses: Reinforcement Learning, Deep Learning, Natural Language Processing, Computer Vision and Robotics, Applied Machine Learning, Blockchain and Distributed Ledgers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="info-card" id="skills">
+            <h3 id="skills-header" data-aos="fade-up">Technical Skills</h3>
+            <div class="skills">
+                <ul>
+                    <li>Python</li>
+                    <li>C++</li>
+                    <li>Java</li>
+                    <li>JavaScript</li>
+                    <li>MATLAB</li>
+                    <li>Kotlin</li>
+                    <li>Swift</li>
+                    <li>C#</li>
+                    <li>SQL</li>
+                    <li>Solidity</li>
+                    <li>PyTorch</li>
+                    <li>TensorFlow</li>
+                    <li>CoreML</li>
+                    <li>Django</li>
+                    <li>ROS</li>
+                    <li>Scikit-Learn</li>
+                    <li>AWS</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Research Experience -->
+        <section class="info-card" id="research">
+            <h3 id="research-header" data-aos="fade-up">Research Experience</h3>
+            <div class="accordion" id="researchAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="researchHeading1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#researchCollapse1" aria-expanded="false" aria-controls="researchCollapse1">
+                            Self-organizing Deep Recurrent Neural Network for Robot Behaviour Control
+                            <span class="ms-2 text-muted" style="font-size: 0.9rem;">Sep 2021 - May 2022</span>
+                        </button>
+                    </h2>
+                    <div id="researchCollapse1" class="accordion-collapse collapse" aria-labelledby="researchHeading1" data-bs-parent="#researchAccordion">
+                        <div class="accordion-body">
+                            <p>Developed a framework for the control of self-organizing robots based on multi-layer neural network architecture, offering better controllability, scalability, and systematic exploration and self-evaluation.</p>
+                            <p>Proposed algorithms and evaluation metrics to balance exploration and exploitation in self-organizing robots, which is interpretable to humans in exploring plausible robot behaviours at a high level.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="researchHeading2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#researchCollapse2" aria-expanded="false" aria-controls="researchCollapse2">
+                            Self-organization in Brain-inspired Robot Control
+                            <span class="ms-2 text-muted" style="font-size: 0.9rem;">Sep 2020 - May 2021</span>
+                        </button>
+                    </h2>
+                    <div id="researchCollapse2" class="accordion-collapse collapse" aria-labelledby="researchHeading2" data-bs-parent="#researchAccordion">
+                        <div class="accordion-body">
+                            <p>Proposed the DIAMOND model using deep recurrent neural networks to model information flow among neural assemblies in the brain, achieving guided self-organization in a top-down manner.</p>
+                            <p>Implemented autonomous learning algorithms within the deep homeokinesis model, simulating creativity and curiosity factors for generating novel self-exploratory behaviours for self-organizing robots.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic Projects -->
+        <section class="info-card" id="projects">
+            <h3 id="projects-header" data-aos="fade-up">Academic Projects</h3>
+            <div class="accordion" id="projectsAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="projHeading1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#projCollapse1" aria-expanded="false" aria-controls="projCollapse1">
+                            Scalable Cooperative Multi-Agent Reinforcement Learning for Autonomous Driving
+                            <span class="ms-2 text-muted" style="font-size: 0.9rem;">Feb 2022 - May 2022</span>
+                        </button>
+                    </h2>
+                    <div id="projCollapse1" class="accordion-collapse collapse" aria-labelledby="projHeading1" data-bs-parent="#projectsAccordion">
+                        <div class="accordion-body">
+                            <p>Developed a multi-agent deep reinforcement learning model in the CARLA simulator to train agents in cooperative behaviors, reducing collisions and self-interested behaviors compared to single-agent baselines.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="projHeading2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#projCollapse2" aria-expanded="false" aria-controls="projCollapse2">
+                            Inverse Reinforcement Learning for Robotic Self-learning
+                            <span class="ms-2 text-muted" style="font-size: 0.9rem;">Jan 2022 - Mar 2022</span>
+                        </button>
+                    </h2>
+                    <div id="projCollapse2" class="accordion-collapse collapse" aria-labelledby="projHeading2" data-bs-parent="#projectsAccordion">
+                        <div class="accordion-body">
+                            <p>Developed a sample-efficient IRL algorithm based on maximum entropy, allowing agents to learn from fewer expert demonstrations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="projHeading3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#projCollapse3" aria-expanded="false" aria-controls="projCollapse3">
+                            AI Paper Search Engine
+                            <span class="ms-2 text-muted" style="font-size: 0.9rem;">Dec 2021 - Feb 2022</span>
+                        </button>
+                    </h2>
+                    <div id="projCollapse3" class="accordion-collapse collapse" aria-labelledby="projHeading3" data-bs-parent="#projectsAccordion">
+                        <div class="accordion-body">
+                            <p>Developed a web-based search engine for AI research papers using JavaScript and PostgreSQL, with NLP algorithms for keyword extraction, grammar correction, and query completion prediction.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="projHeading4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#projCollapse4" aria-expanded="false" aria-controls="projCollapse4">
+                            Decentralized Chess on the Ethereum Blockchain
+                            <span class="ms-2 text-muted" style="font-size: 0.9rem;">Nov 2021 - Jan 2022</span>
+                        </button>
+                    </h2>
+                    <div id="projCollapse4" class="accordion-collapse collapse" aria-labelledby="projHeading4" data-bs-parent="#projectsAccordion">
+                        <div class="accordion-body">
+                            <p>Developed a decentralized chess game leveraging Solidity smart contracts, ensuring a tamper-proof and transparent game experience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="projHeading5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#projCollapse5" aria-expanded="false" aria-controls="projCollapse5">
+                            Android and iOS App Development for Human Activity Recognition
+                            <span class="ms-2 text-muted" style="font-size: 0.9rem;">Sep 2021 - Dec 2021</span>
+                        </button>
+                    </h2>
+                    <div id="projCollapse5" class="accordion-collapse collapse" aria-labelledby="projHeading5" data-bs-parent="#projectsAccordion">
+                        <div class="accordion-body">
+                            <p>Developed Android and iOS apps for classifying live human activities using on-device machine learning and IoT sensors.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Robotics C++ Project Demo Modal Trigger -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="projHeading6">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="modal" data-bs-target="#roboticsDemoModal">
+                            Robotics C++ Project Demo
+                            <span class="ms-2 text-muted" style="font-size: 0.9rem;">Video Demo</span>
+                        </button>
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="info-card" id="portfolio">
+            <h3 id="portfolio-header" data-aos="fade-up">Portfolio</h3>
+            <div class="portfolio-container">
+                <!-- Project 1: Dexter Robot Website -->
+                <div class="portfolio-card">
+                    <iframe src="https://sdp2020.gitlab.io/group12/" title="Dexter: Intelligent Assistive Robot" sandbox="allow-scripts allow-same-origin" allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5>Dexter: Intelligent Assistive Robot for Cleaning and Writing</h5>
+                        <p>Developed an intelligent assistive robot named Dexter capable of performing cleaning and writing tasks using advanced robotics and machine learning techniques.</p>
+                        <a href="https://sdp2020.gitlab.io/group12/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Visit Website</a>
+                    </div>
+                </div>
+                <!-- Project 2: Medium Article -->
+                <div class="portfolio-card">
+                    <img src="images/2.jpg" alt="Self-Organization In Brain-Inspired Robot Control">
+                    <div class="card-body">
+                        <h5>Self-Organization In Brain-Inspired Robot Control</h5>
+                        <p>Explored self-organization principles in brain-inspired robot control systems, enhancing autonomous behavior and adaptability.</p>
+                        <a href="https://medium.com/@0406/self-organization-in-robot-control-c58470886535" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Read Article</a>
+                    </div>
+                </div>
+                <!-- Project 3: YouTube Video at NeuroMONSTER Conference -->
+                <div class="portfolio-card">
+                    <iframe src="https://www.youtube.com/embed/YeHuOEX_Lso" title="Self-organising Neural Network for Behaviour Control at NeuroMONSTER Conference 2021" frameborder="0" allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5>Self-organising Neural Network for Behaviour Control</h5>
+                        <p>Presented a self-organizing neural network for behavior control at the NeuroMONSTER Conference 2021, demonstrating advanced robotic autonomy.</p>
+                        <a href="https://www.youtube.com/watch?v=YeHuOEX_Lso&t=20s" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Watch Video</a>
+                    </div>
+                </div>
+                <!-- Project 4: YouTube Project Introduction Demo -->
+                <div class="portfolio-card">
+                    <iframe src="https://www.youtube.com/embed/adQRJWyv7Ss" title="Self-Organization in Robot Control - Project Introduction Demo" frameborder="0" allowfullscreen></iframe>
+                    <div class="card-body">
+                        <h5>Self-Organization in Robot Control - Project Introduction Demo</h5>
+                        <p>Demonstrated the self-organization capabilities of robot control systems through a comprehensive project demo video.</p>
+                        <a href="https://www.youtube.com/watch?v=adQRJWyv7Ss" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Watch Demo</a>
+                    </div>
+                </div>
+                <!-- Project 5: GitHub Repository DEP-Diamond -->
+                <div class="portfolio-card">
+                    <img src="images/demo1.gif" alt="Multi-layer DEP Neural Plasticity Rule">
+                    <div class="card-body">
+                        <h5>Multi-layer DEP Neural Plasticity Rule</h5>
+                        <p>Implemented a multi-layer DEP neural plasticity rule for self-organizing robot control in hexapod simulations.</p>
+                        <a href="https://github.com/jerryzhao173985/DEP-Diamond" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Repository</a>
+                    </div>
+                </div>
+                <!-- Project 6: GitHub Repository DEPNEW -->
+                <div class="portfolio-card">
+                    <img src="images/hexapod.jpg" alt="Novel DEP Plasticity Rule">
+                    <div class="card-body">
+                        <h5>Novel DEP Plasticity Rule</h5>
+                        <p>Developed a novel DEP plasticity rule for the advancement of sensorimotor intelligence in robotic systems.</p>
+                        <a href="https://github.com/jerryzhao173985/DEPNEW" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Repository</a>
+                    </div>
+                </div>
+                <!-- Project 7: GitHub Repository Self-organisation Evaluation MATLAB Code -->
+                <div class="portfolio-card">
+                    <img src="images/gait.png" alt="Self-Organisation Evaluation MATLAB Code">
+                    <div class="card-body">
+                        <h5>Self-Organisation Evaluation MATLAB Code</h5>
+                        <p>Developed MATLAB code for evaluating self-organisation based on simulated hexapod control mechanisms.</p>
+                        <a href="https://github.com/jerryzhao173985/Self-organization-Evaluation-MATLAB-" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Repository</a>
+                    </div>
+                </div>
+                <!-- Project 8: GitHub Repository PDIoT App -->
+                <div class="portfolio-card">
+                    <img src="images/pdiot.png" alt="PDIoT App - Human Activity Detection on Android">
+                    <div class="card-body">
+                        <h5>PDIoT App - Human Activity Detection on Android</h5>
+                        <p>Implemented on-device machine learning for human activity detection using Respeck sensors on Android platforms.</p>
+                        <a href="https://github.com/jerryzhao173985/pdiot-app" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Repository</a>
+                    </div>
+                </div>
+                <!-- Project 9: GitHub Repository Thingy Human Activity iOS -->
+                <div class="portfolio-card">
+                    <img src="images/thingy.png" alt="Human Activity Detection on iOS">
+                    <div class="card-body">
+                        <h5>Human Activity Detection on iOS</h5>
+                        <p>Developed human activity detection applications using TensorFlowLite and Nordic Thingy sensors for iOS devices.</p>
+                        <a href="https://github.com/jerryzhao173985/ThingyHumanActivityIOS" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Repository</a>
+                    </div>
+                </div>
+                <!-- Project 10: GitHub Repository TTDS Online Paper Search Engine -->
+                <div class="portfolio-card">
+                    <img src="images/search.gif" alt="TTDS Online Paper Search Engine">
+                    <div class="card-body">
+                        <h5>TTDS Online Paper Search Engine</h5>
+                        <p>Developed a Google-like online paper search engine using Django, enhancing research accessibility and efficiency.</p>
+                        <a href="https://github.com/jerryzhao173985/TTDS_Paper_Search" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Repository</a>
+                    </div>
+                </div>
+                <!-- Project 11: GitHub Repository Django-based Heroku App Search Engine -->
+                <div class="portfolio-card">
+                    <img src="images/django.png" alt="Django-based Heroku App Search Engine">
+                    <div class="card-body">
+                        <h5>Django-based Heroku App Search Engine</h5>
+                        <p>Implemented a Django-based search engine web application hosted on Heroku, facilitating efficient data retrieval and management.</p>
+                        <a href="https://github.com/jerryzhao173985/Django-based-Heroku-app-Search-Engine" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Repository</a>
+                    </div>
+                </div>
+                <!-- Project 12: GitHub Repository NewsGPT Search -->
+                <div class="portfolio-card">
+                    <img src="images/project.jpg" alt="NewsGPT: Intelligent Search Engine">
+                    <div class="card-body">
+                        <h5>NewsGPT: Intelligent Search Engine</h5>
+                        <p>Developed NewsGPT, an intelligent search engine with GPT-4 summarization and understanding capabilities for enhanced information retrieval.</p>
+                        <a href="https://github.com/jerryzhao173985/NewsGPT-search?tab=readme-ov-file" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Repository</a>
+                    </div>
+                </div>
+                <!-- Project 13: GitHub Repository Code Llama for iOS -->
+                <div class="portfolio-card">
+                    <img src="images/13.png" alt="Code Llama 7B Instruction Model for iOS">
+                    <div class="card-body">
+                        <h5>Code Llama 7B Instruction Model for iOS</h5>
+                        <p>Implemented the Code Llama 7B Instruction Model for iOS using gguf and mlx, enhancing mobile development capabilities with advanced AI models.</p>
+                        <a href="https://github.com/jerryzhao173985/Code-Llama-7B-Instruction-Model-for-iOS" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Repository</a>
+                    </div>
+                </div>
+                <!-- Project 14: GitHub Repository GPT-4o Vision iOS Photo App -->
+                <div class="portfolio-card">
+                    <img src="images/14.png" alt="GPT-4o Vision iOS Photo App">
+                    <div class="card-body">
+                        <h5>GPT-4o Vision iOS Photo App</h5>
+                        <p>Developed a custom iOS photo app using GPT-4o Vision to answer users' questions about their photos, enhancing interactive user experiences.</p>
+                        <a href="https://github.com/jerryzhao173985/GPT-4o-Vision-iOS-Photo-app" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Repository</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="info-card" id="contact">
+            <h3 id="contact-header" data-aos="fade-up">Contact</h3>
+            <p>Email: <a href="mailto:jerryzhao173985@gmail.com">jerryzhao173985@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/jerryzhao173985" target="_blank">linkedin.com/in/jerryzhao173985</a></p>
+            <p>Phone: +447468192112</p>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Xiangrui (Jerry) Zhao. All rights reserved.</p>
+    </footer>
+
+    <!-- Back-to-Top Button -->
+    <button id="backToTop" aria-label="Back to Top"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- Robotics C++ Project Demo Modal -->
+    <div class="modal fade" id="roboticsDemoModal" tabindex="-1" aria-labelledby="roboticsDemoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Robotics C++ Project Demo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/adQRJWyv7Ss" title="Robotics C++ Project Demo" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="info-card">
-        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h5>Master of Informatics with Honours (Integrated Master) - University of Edinburgh</h5>
-                <span>Sep 2018 - May 2022</span>
-                <div class="details-summary">View Details</div>
-                <div class="details-content">
-                    <p>Academic Accolades: 2:1</p>
-                    <p>Core courses: Reinforcement Learning, Deep Learning, Natural Language Processing, Computer Vision and Robotics, Applied Machine Learning, Blockchain and Distributed Ledgers.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="info-card">
-        <h3><i class="fas fa-tools"></i> Technical Skills</h3>
-        <div class="skills">
-            <ul>
-                <li>Python</li>
-                <li>C++</li>
-                <li>Java</li>
-                <li>JavaScript</li>
-                <li>MATLAB</li>
-                <li>Kotlin</li>
-                <li>Swift</li>
-                <li>C#</li>
-                <li>SQL</li>
-                <li>Solidity</li>
-                <li>PyTorch</li>
-                <li>TensorFlow</li>
-                <li>CoreML</li>
-                <li>Django</li>
-                <li>ROS</li>
-                <li>Scikit-Learn</li>
-                <li>AWS</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="info-card">
-        <h3><i class="fas fa-flask"></i> Research Experience</h3>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h5>Self-organizing Deep Recurrent Neural Network for Robot Behaviour Control</h5>
-                <span>Sep 2021 - May 2022</span>
-                <div class="details-summary">View Details</div>
-                <div class="details-content">
-                    <p>Developed a framework for the control of self-organizing robots based on multi-layer neural network architecture, offering better controllability, scalability, and systematic exploration and self-evaluation.</p>
-                    <p>Proposed algorithms and evaluation metrics to balance exploration and exploitation in self-organizing robots, which is interpretable to humans in exploring plausible robot behaviours at a high level.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <h5>Self-organization in Brain-inspired Robot Control</h5>
-                <span>Sep 2020 - May 2021</span>
-                <div class="details-summary">View Details</div>
-                <div class="details-content">
-                    <p>Proposed the DIAMOND model using deep recurrent neural networks to model information flow among neural assemblies in the brain, achieving guided self-organization in a top-down manner.</p>
-                    <p>Implemented autonomous learning algorithms within the deep homeokinesis model, simulating creativity and curiosity factors for generating novel self-exploratory behaviours for self-organizing robots.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="info-card">
-        <h3><i class="fas fa-project-diagram"></i> Academic Projects</h3>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h5>Scalable Cooperative Multi-Agent Reinforcement Learning for Autonomous Driving</h5>
-                <span>Feb 2022 - May 2022</span>
-                <div class="details-summary">View Details</div>
-                <div class="details-content">
-                    <p>Developed a multi-agent deep reinforcement learning model in the CARLA simulator to train agents in cooperative behaviors, reducing collisions and self-interested behaviors compared to single-agent baselines.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <h5>Inverse Reinforcement Learning for Robotic Self-learning</h5>
-                <span>Jan 2022 - Mar 2022</span>
-                <div class="details-summary">View Details</div>
-                <div class="details-content">
-                    <p>Developed a sample-efficient IRL algorithm based on maximum entropy, allowing agents to learn from fewer expert demonstrations.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <h5>AI Paper Search Engine</h5>
-                <span>Dec 2021 - Feb 2022</span>
-                <div class="details-summary">View Details</div>
-                <div class="details-content">
-                    <p>Developed a web-based search engine for AI research papers using JavaScript and PostgreSQL, with NLP algorithms for keyword extraction, grammar correction, and query completion prediction.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <h5>Decentralized Chess on the Ethereum Blockchain</h5>
-                <span>Nov 2021 - Jan 2022</span>
-                <div class="details-summary">View Details</div>
-                <div class="details-content">
-                    <p>Developed a decentralized chess game leveraging Solidity smart contracts, ensuring a tamper-proof and transparent game experience.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <h5>Android and iOS App Development for Human Activity Recognition</h5>
-                <span>Sep 2021 - Dec 2021</span>
-                <div class="details-summary">View Details</div>
-                <div class="details-content">
-                    <p>Developed Android and iOS apps for classifying live human activities using on-device machine learning and IoT sensors.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="info-card">
-        <h3><i class="fas fa-envelope"></i> Contact</h3>
-        <p>Email: <a href="mailto:jerryzhao173985@gmail.com">jerryzhao173985@gmail.com</a></p>
-        <p>LinkedIn: <a href="#">linkedin.com/in/xiangrui-jerry-zhao</a></p>
-        <p>Phone: +447468192112</p>
-    </div>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $('.header p').hover(function() {
-            $(this).css('font-weight', 'bold');
-            $(this).attr('title', 'Click to learn more about me');
-        }, function() {
-            $(this).css('font-weight', 'normal');
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
         });
-    });
-</script>
+
+        // Back-to-Top Button Functionality
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Close Navbar Collapse on Link Click (for mobile)
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        const navbarCollapse = document.getElementById('navbarNav');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.getComputedStyle(navbarCollapse).display !== 'none') {
+                    new bootstrap.Collapse(navbarCollapse).toggle();
+                }
+            });
+        });
+
+        // Dark Mode Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+        if (currentTheme) {
+            document.body.setAttribute('data-theme', currentTheme);
+
+            if (currentTheme === 'dark') {
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+        }
+
+        themeToggle.addEventListener('click', () => {
+            let theme = document.body.getAttribute('data-theme');
+            if (theme === 'light') {
+                document.body.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            } else {
+                document.body.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            }
+        });
+    </script>
 </body>
 </html>
