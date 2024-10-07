@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume</title>
+    <title>Xiangrui (Jerry) Zhao - Resume</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +13,7 @@
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #f8f9fa;
+            overflow-x: hidden;
         }
         .main-container {
             max-width: 1100px;
@@ -26,10 +27,16 @@
         .header h1 {
             font-weight: 700;
             margin-bottom: 10px;
+            animation: fadeInDown 1s ease-in-out;
         }
         .header p {
             font-size: 1.2rem;
             color: #6c757d;
+            transition: color 0.3s ease;
+        }
+        .header p:hover {
+            color: #007bff;
+            cursor: pointer;
         }
         .info-card {
             background: #ffffff;
@@ -37,9 +44,26 @@
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 1s ease-in-out;
         }
         .info-card h3 {
             font-weight: 500;
+            position: relative;
+        }
+        .info-card h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 3px;
+            background: #007bff;
+            transition: width 0.3s ease;
+        }
+        .info-card h3:hover::after {
+            width: 100%;
         }
         .skills ul {
             list-style-type: none;
@@ -52,15 +76,33 @@
             margin: 5px;
             border-radius: 4px;
             font-weight: 500;
+            transition: transform 0.3s ease;
+        }
+        .skills ul li:hover {
+            transform: scale(1.1);
+            background: #007bff;
+            color: #fff;
         }
         .timeline {
             border-left: 4px solid #007bff;
             margin-left: 30px;
             padding-left: 20px;
+            position: relative;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: -34px;
+            top: 0;
+            bottom: 0;
+            width: 8px;
+            background: linear-gradient(180deg, #007bff, #6c757d);
+            animation: gradientMove 3s infinite linear;
         }
         .timeline-item {
             margin-bottom: 20px;
             position: relative;
+            animation: fadeInUp 1.2s ease-in-out;
         }
         .timeline-item::before {
             content: "";
@@ -71,6 +113,61 @@
             height: 20px;
             background: #007bff;
             border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0,123,255,0.5);
+        }
+        .timeline-item h5 {
+            transition: color 0.3s ease;
+        }
+        .timeline-item h5:hover {
+            color: #007bff;
+        }
+        .details-summary {
+            display: inline-block;
+            cursor: pointer;
+            font-weight: 500;
+            color: #007bff;
+        }
+        .details-summary:hover {
+            text-decoration: underline;
+        }
+        .details-content {
+            display: none;
+            margin-top: 10px;
+            background: #f1f1f1;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .details-summary:hover + .details-content {
+            display: block;
+            animation: fadeInUp 0.5s ease-in-out;
+        }
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
         }
     </style>
 </head>
@@ -78,27 +175,39 @@
 
 <div class="main-container">
     <div class="header">
-        <h1>My Name Here</h1>
-        <p>Software Developer | Data Analyst | Creative Innovator</p>
+        <h1>Xiangrui (Jerry) Zhao</h1>
+        <p>Software Engineer | Machine Learning Enthusiast | Innovator</p>
     </div>
 
     <div class="info-card">
         <h3><i class="fas fa-user"></i> About Me</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae aliquam nulla, non sodales lacus. Aliquam erat volutpat.</p>
+        <p>I am a passionate software engineer with a strong background in machine learning, data analysis, and innovative technology development. I am motivated to create impactful solutions through coding and research, continuously pushing the boundaries of what is possible with technology.</p>
     </div>
 
     <div class="info-card">
         <h3><i class="fas fa-briefcase"></i> Work Experience</h3>
         <div class="timeline">
             <div class="timeline-item">
-                <h5>Software Engineer II - XYZ Company</h5>
-                <span>Jan 2021 - Present</span>
-                <p>Responsibilities and achievements at XYZ company go here.</p>
+                <h5>Software Engineer II - Cadence Design Systems</h5>
+                <span>May 2023 - Present</span>
+                <div class="details-summary">View Details</div>
+                <div class="details-content">
+                    <p>Developed and maintained software validation tools for complex Process Design Kits (PDKs) in Cadence Virtuoso using C++ and SKILL, enhancing IC design processes by ensuring high-quality PDK validation and migration through robust, integrated solutions within the design environment.</p>
+                    <p>Enhanced tool performance and customer experience by creating user-friendly UI features, streamlining batch operations with foundational APIs, and implementing robust testing frameworks; resolved critical customer-reported issues, increasing efficiency and reducing errors.</p>
+                    <p>Leveraged AI, machine learning, and data-driven methods to generalize PDK validation systems and automate PCell code generation, resulting in reduced test patterns and faster quality analysis without compromising overall quality.</p>
+                    <p>Collaborated closely with customers to implement product enhancements and fix development bugs; aligned system designs with customer needs, improved software quality and maintainability, and addressed challenges in PDK migration and readiness across various Cadence Virtuoso products.</p>
+                </div>
             </div>
             <div class="timeline-item">
-                <h5>Machine Learning Intern - ABC Company</h5>
-                <span>June 2020 - Dec 2020</span>
-                <p>Responsibilities and achievements during internship go here.</p>
+                <h5>Machine Learning Intern - Zonda</h5>
+                <span>Feb 2023 - May 2023</span>
+                <div class="details-summary">View Details</div>
+                <div class="details-content">
+                    <p>Developed high-fidelity text-to-3D object generation models using GANs and Stable Diffusion. Implemented and optimized state-of-the-art diffusion-based neural network to generate accurate, textured 3D objects from text and images.</p>
+                    <p>Integrated advanced techniques from Stable-Dreamfusion, ControlNet, OpenAI's Point-E, and Pixel2Mesh models to enhance performance and output quality.</p>
+                    <p>Optimized training efficiency and model convergence through hyperparameter tuning using custom accuracy metrics. Resolved instability issues by employing prompt engineering techniques with ChatGPT to design effective text prompts, leading to faster inference times and more accurate results.</p>
+                    <p>Developed a web interface for 3D object generation using AWS EC2 and integrated cloud storage with S3. Deployed models on AWS SageMaker using Docker containers and custom training scripts, automating resource allocation and training pipelines, which streamlined the workflow and improved scalability.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -107,40 +216,131 @@
         <h3><i class="fas fa-graduation-cap"></i> Education</h3>
         <div class="timeline">
             <div class="timeline-item">
-                <h5>Master's in Data Science - University of ABC</h5>
-                <span>2018 - 2020</span>
-                <p>Details about studies and specialization.</p>
-            </div>
-            <div class="timeline-item">
-                <h5>Bachelor's in Computer Science - University of XYZ</h5>
-                <span>2014 - 2018</span>
-                <p>Details about studies and specialization.</p>
+                <h5>Master of Informatics with Honours (Integrated Master) - University of Edinburgh</h5>
+                <span>Sep 2018 - May 2022</span>
+                <div class="details-summary">View Details</div>
+                <div class="details-content">
+                    <p>Academic Accolades: 2:1</p>
+                    <p>Core courses: Reinforcement Learning, Deep Learning, Natural Language Processing, Computer Vision and Robotics, Applied Machine Learning, Blockchain and Distributed Ledgers.</p>
+                </div>
             </div>
         </div>
     </div>
 
     <div class="info-card">
-        <h3><i class="fas fa-tools"></i> Skills</h3>
+        <h3><i class="fas fa-tools"></i> Technical Skills</h3>
         <div class="skills">
             <ul>
                 <li>Python</li>
+                <li>C++</li>
+                <li>Java</li>
                 <li>JavaScript</li>
-                <li>Data Analysis</li>
+                <li>MATLAB</li>
+                <li>Kotlin</li>
+                <li>Swift</li>
+                <li>C#</li>
                 <li>SQL</li>
-                <li>Machine Learning</li>
-                <li>HTML/CSS</li>
+                <li>Solidity</li>
+                <li>PyTorch</li>
+                <li>TensorFlow</li>
+                <li>CoreML</li>
+                <li>Django</li>
+                <li>ROS</li>
+                <li>Scikit-Learn</li>
+                <li>AWS</li>
             </ul>
         </div>
     </div>
 
     <div class="info-card">
+        <h3><i class="fas fa-flask"></i> Research Experience</h3>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h5>Self-organizing Deep Recurrent Neural Network for Robot Behaviour Control</h5>
+                <span>Sep 2021 - May 2022</span>
+                <div class="details-summary">View Details</div>
+                <div class="details-content">
+                    <p>Developed a framework for the control of self-organizing robots based on multi-layer neural network architecture, offering better controllability, scalability, and systematic exploration and self-evaluation.</p>
+                    <p>Proposed algorithms and evaluation metrics to balance exploration and exploitation in self-organizing robots, which is interpretable to humans in exploring plausible robot behaviours at a high level.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <h5>Self-organization in Brain-inspired Robot Control</h5>
+                <span>Sep 2020 - May 2021</span>
+                <div class="details-summary">View Details</div>
+                <div class="details-content">
+                    <p>Proposed the DIAMOND model using deep recurrent neural networks to model information flow among neural assemblies in the brain, achieving guided self-organization in a top-down manner.</p>
+                    <p>Implemented autonomous learning algorithms within the deep homeokinesis model, simulating creativity and curiosity factors for generating novel self-exploratory behaviours for self-organizing robots.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-card">
+        <h3><i class="fas fa-project-diagram"></i> Academic Projects</h3>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h5>Scalable Cooperative Multi-Agent Reinforcement Learning for Autonomous Driving</h5>
+                <span>Feb 2022 - May 2022</span>
+                <div class="details-summary">View Details</div>
+                <div class="details-content">
+                    <p>Developed a multi-agent deep reinforcement learning model in the CARLA simulator to train agents in cooperative behaviors, reducing collisions and self-interested behaviors compared to single-agent baselines.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <h5>Inverse Reinforcement Learning for Robotic Self-learning</h5>
+                <span>Jan 2022 - Mar 2022</span>
+                <div class="details-summary">View Details</div>
+                <div class="details-content">
+                    <p>Developed a sample-efficient IRL algorithm based on maximum entropy, allowing agents to learn from fewer expert demonstrations.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <h5>AI Paper Search Engine</h5>
+                <span>Dec 2021 - Feb 2022</span>
+                <div class="details-summary">View Details</div>
+                <div class="details-content">
+                    <p>Developed a web-based search engine for AI research papers using JavaScript and PostgreSQL, with NLP algorithms for keyword extraction, grammar correction, and query completion prediction.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <h5>Decentralized Chess on the Ethereum Blockchain</h5>
+                <span>Nov 2021 - Jan 2022</span>
+                <div class="details-summary">View Details</div>
+                <div class="details-content">
+                    <p>Developed a decentralized chess game leveraging Solidity smart contracts, ensuring a tamper-proof and transparent game experience.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <h5>Android and iOS App Development for Human Activity Recognition</h5>
+                <span>Sep 2021 - Dec 2021</span>
+                <div class="details-summary">View Details</div>
+                <div class="details-content">
+                    <p>Developed Android and iOS apps for classifying live human activities using on-device machine learning and IoT sensors.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="info-card">
         <h3><i class="fas fa-envelope"></i> Contact</h3>
-        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
+        <p>Email: <a href="mailto:jerryzhao173985@gmail.com">jerryzhao173985@gmail.com</a></p>
+        <p>LinkedIn: <a href="#">linkedin.com/in/xiangrui-jerry-zhao</a></p>
+        <p>Phone: +447468192112</p>
     </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.header p').hover(function() {
+            $(this).css('font-weight', 'bold');
+            $(this).attr('title', 'Click to learn more about me');
+        }, function() {
+            $(this).css('font-weight', 'normal');
+        });
+    });
+</script>
 </body>
 </html>
