@@ -1,252 +1,177 @@
-#Jerry Zhao - 简历
+# Jerry Zhao - 简历
 
-### 关于我
+欢迎来到我的简历页面！我是热衷于技术创新和研发的软件工程师，专注于机器学习、数据分析和机器人技术。请通过下列各部分了解我的工作经历、教育背景、研究成果与项目实践。
 
-我是一位充满热情的软件工程师，在机器学习、数据分析和创新技术开发领域拥有扎实的背景。我致力于通过代码和研究创造具有影响力的解决方案，不断拓展技术应用的边界，不断突破技术应用的边界。
+---
 
-###工作经历
+## 目录
 
-## 软件工程师 II - Cadence Design Systems  2023年5月 - 至今
+- [关于我](#关于我)
+- [工作经历](#工作经历)
+  - [软件工程师 II - Cadence Design Systems](#软件工程师-ii---cadence-design-systems)
+  - [机器学习实习生 - Zonda](#机器学习实习生---zonda)
+- [教育背景](#教育背景)
+- [技术技能](#技术技能)
+- [研究经历](#研究经历)
+  - [用于机器人行为控制的自组织深度循环神经网络](#用于机器人行为控制的自组织深度循环神经网络)
+  - [受大脑启发的机器人控制中的自组织](#受大脑启发的机器人控制中的自组织)
+- [学术项目](#学术项目)
+  - [可扩展协同多智能体强化学习 - 自动驾驶](#用于自动驾驶的可扩展协同多智能体强化学习)
+  - [机器人自学习的逆强化学习](#用于机器人自学习的逆强化学习)
+  - [AI论文搜索引擎](#ai论文搜索引擎)
+  - [以太坊区块链上的去中心化国际象棋](#以太坊区块链上的去中心化国际象棋)
+  - [人体活动识别移动应用](#用于人体活动识别的-android-和-ios-应用程序开发)
+  - [机器人 C++ 项目演示](#机器人-c-项目演示)
+- [作品集](#作品集)
+- [简历下载](#简历下载)
+- [联系方式](#联系方式)
 
-*   使用 C++ 和 SKILL语言，为 Cadence Virtuoso 中复杂的工艺设计套件（PDK）开发和维护软件验证工具。通过打造集成化解决方案，在设计环境中实现高质量的 PDK 验证和迁移，从而优化 IC 设计流程。*   通过创建用户友好的用户界面 (UI) 功能，利用基础应用程序编程接口 (API) 简化批量操作，并实施稳健的测试框架，提升工具性能和客户体验；解决客户反馈的关键问题，提高效率并减少错误。同时，与客户保持密切沟通，确保产品持续优化。
-*   利用人工智能 (AI)、机器学习和数据驱动的方法，使 PDK 验证系统泛化并自动化参数化单元（PCell）代码生成，从而在不影响整体质量的前提下，减少测试模式并加快质量分析速度。
-*   与客户紧密合作，实施产品增强功能并修复开发漏洞；使系统设计与客户需求保持一致，提高软件质量和可维护性，并解决各种 Cadence Virtuoso 产品中 PDK 迁移和就绪方面的挑战。
+---
 
-## 机器学习实习生 - Zonda  2023年2月 - 2023年5月
+## 关于我
 
-*   使用生成对抗网络（GANs）和 Stable Diffusion (稳定扩散) 开发高保真文本到 3D 对象生成模型。实施并优化最先进的基于扩散的神经网络，以从文本和图像生成精确的、带纹理的 3D 对象。
-*   整合了 Stable-Dreamfusion、ControlNet、OpenAI 的 Point-E 和 Pixel2Mesh 模型的先进技术，以增强性能和输出质量。
-*   通过使用自定义的精度指标进行超参数调优，优化训练效率和模型收敛。通过使用 ChatGPT 的提示工程技术设计有效的文本提示，解决了不稳定性问题，从而加快了推理时间并提高了结果的准确性。
-*   使用 AWS EC2 开发了用于 3D 对象生成的 Web 界面，并将云存储与S3 集成。使用 Docker 容器和自定义训练脚本在 AWS SageMaker 上部署模型，自动化资源分配和训练管道，从而简化了工作流程并提高了可扩展性。
+我是一位充满热情的软件工程师，致力于通过不断探索和实践，开发出创新且高效的技术解决方案。我专注于机器学习、数据分析和机器人技术，力求在科技与现实生活的交汇处创造价值。
 
-### 教育背景
+---
 
-## 信息学硕士 (荣誉硕士学位) - 爱丁堡大学  2018年9月 - 2022年5月
+## 工作经历
 
-*   学术荣誉：荣誉学位：二等一级 (2:1)
-*   核心课程：强化学习、深度学习、自然语言处理、计算机视觉与机器人、应用机器学习、区块链与分布式账本。
+### 软件工程师 II - Cadence Design Systems  
+*2023年5月 – 至今*
 
-### 技术技能
+- **软件验证工具开发：**  
+  使用 C++ 和 SKILL 语言，为 Cadence Virtuoso 中的复杂工艺设计套件（PDK）开发和维护软件验证工具，从而优化 IC 设计流程。
+- **界面与流程优化：**  
+  设计直观的用户界面（UI），利用 API 简化批量操作，并构建稳健的测试框架，有效解决客户反馈的问题，提升工具性能。
+- **AI 驱动自动化：**  
+  运用人工智能（AI）、机器学习和数据驱动方法，实现 PDK 验证系统的泛化及自动化 PCell 代码生成，加快质量分析速度。
+- **客户协作：**  
+  与客户密切沟通，持续改进产品功能、修复开发漏洞，确保系统设计与客户需求高度契合。
 
--Python
-- C++
-- Java
-- JavaScript
-- MATLAB
-- Kotlin
-- Swift
-- C#
-- SQL
-- Solidity
-- PyTorch
-- TensorFlow
-- CoreML
-- Django
-- ROS
-- Scikit-Learn
-- AWS
+### 机器学习实习生 - Zonda  
+*2023年2月 – 2023年5月*
 
-### 研究经历
+- **文本到 3D 对象生成：**  
+  利用生成对抗网络（GANs）和 Stable Diffusion 技术，开发高保真文本到 3D 对象生成模型，精准生成带纹理的 3D 对象。
+- **前沿技术集成：**  
+  整合 Stable-Dreamfusion、ControlNet、OpenAI 的 Point-E 及 Pixel2Mesh 等先进技术，显著提升模型性能与输出质量。
+- **模型优化：**  
+  通过自定义精度指标进行超参数调优，并借助 ChatGPT 的提示工程技术，解决模型不稳定问题，加快推理速度。
+- **云端部署：**  
+  开发基于 AWS EC2 的 3D 生成 Web 界面，并将云存储（S3）集成到项目中；利用 Docker 和自定义训练脚本，在 AWS SageMaker 上实现自动化部署。
 
-## 用于机器人行为控制的自组织深度循环神经网络  2021年9月 - 2022年5月
+---
 
-*   开发了一个基于多层神经网络架构的自组织机器人控制框架，提供更好的可控性、可扩展性以及系统的探索与自我评估能力。
-*   提出了用于平衡自组织机器人探索和利用的算法和评估指标，这些算法和指标可以被人理解，从而在高层次上探索合理的机器人行为。
+## 教育背景
 
-## 受大脑启发的机器人控制中的自组织  2020年9月 - 2021年5月
+### 信息学硕士（荣誉硕士学位） - 爱丁堡大学  
+*2018年9月 – 2022年5月*
 
-*   提出了 DIAMOND模型，该模型使用深度循环神经网络来模拟大脑中神经元集合之间的信息流，以自上而下的方式实现引导式自组织。
-*   在深度自稳性模型 (deep homeokinesis model) 中实施了自主学习算法，模拟创造力和好奇心因素，为自组织机器人生成新颖的自探索行为。
+- **学术荣誉：**  
+  获得二等一级荣誉学位（2:1）
+- **核心课程：**  
+  强化学习、深度学习、自然语言处理、计算机视觉与机器人、应用机器学习、区块链与分布式账本
 
-### 学术项目
+---
 
-## 用于自动驾驶的可扩展协同多智能体强化学习  2022年2月 - 2022年5月
+## 技术技能
 
-*   在 CARLA 模拟器中开发了一个多智能体深度强化学习模型，以训练智能体进行协同行为，与单智能体基线相比，减少了碰撞和自私行为。
+- **编程语言：**  
+  Python、C++、Java、JavaScript、MATLAB、Kotlin、Swift、C#、SQL、Solidity
+- **框架与工具：**  
+  PyTorch、TensorFlow、CoreML、Django、ROS、Scikit-Learn、AWS
 
-## 用于机器人自学习的逆强化学习  2022年1月 - 2022年3月
+---
 
-*   开发了一种基于最大熵原理的高效逆强化学习（IRL）算法，使智能体在仅凭较少的专家演示下也能迅速掌握关键技能。
+## 研究经历
 
-## AI 论文搜索引擎  2021年12月 - 2022年2月
+### 用于机器人行为控制的自组织深度循环神经网络  
+*2021年9月 – 2022年5月*
 
-*   使用 JavaScript 和 PostgreSQL 开发了一个基于 Web 的 AI 研究论文搜索引擎，并结合自然语言处理 (NLP) 算法进行关键词提取、语法纠错和查询完成预测。
+- 构建基于多层神经网络的自组织机器人控制框架，实现更优的可控性和系统评估能力。
+- 提出平衡探索与利用的算法及评估指标，为机器人行为规划提供理论依据。
 
-## 以太坊区块链上的去中心化国际象棋  2021年11月 - 2022年1月
+### 受大脑启发的机器人控制中的自组织  
+*2020年9月 – 2021年5月*
 
-*   开发了一款利用 Solidity 智能合约的去中心化国际象棋游戏，确保游戏体验的防篡改和透明性。
+- 提出 DIAMOND 模型，通过深度循环神经网络模拟大脑神经元间的信息流，实现自上而下的引导式自组织。
+- 在深度自稳性模型中实施自主学习算法，模拟创造力与好奇心，生成新颖的自探索行为。
 
-## 用于人体活动识别的 Android 和 iOS 应用程序开发  2021年9月 - 2021年12月
+---
 
-*   开发了 Android 和 iOS 应用程序，用于使用设备上的机器学习和物联网 (IoT) 传感器对实时人体活动进行分类。
+## 学术项目
 
-## 机器人 C++ 项目演示
+### 用于自动驾驶的可扩展协同多智能体强化学习  
+*2022年2月 – 2022年5月*
 
-### 作品集
+- 在 CARLA 模拟器中开发多智能体深度强化学习模型，实现智能体间的协同作业，降低碰撞率及自私行为。
 
-Dexter
+### 用于机器人自学习的逆强化学习  
+*2022年1月 – 2022年3月*
 
-[系统](https://sdp2020.gitlab.io/group12/system)
+- 开发基于最大熵原理的高效逆强化学习（IRL）算法，使智能体在较少专家演示下迅速掌握关键技能。
 
-[工作原理](https://sdp2020.gitlab.io/group12/howdoesitwork)
+### AI 论文搜索引擎  
+*2021年12月 – 2022年2月*
 
-[评估](https://sdp2020.gitlab.io/group12/evaluation)
+- 利用 JavaScript 和 PostgreSQL 构建 Web 版 AI 论文搜索引擎，结合 NLP 算法实现关键词提取、语法纠错和查询预测。
 
-[预算](https://sdp2020.gitlab.io/group12/budget)[团队](https://sdp2020.gitlab.io/group12/team)
+### 以太坊区块链上的去中心化国际象棋  
+*2021年11月 – 2022年1月*
 
-[评论](https://sdp2020.gitlab.io/group12/comments)
+- 开发基于 Solidity 智能合约的去中心化国际象棋游戏，确保游戏数据防篡改、透明公开。
 
-## 概述
+### 用于人体活动识别的 Android 与 iOS 应用程序开发  
+*2021年9月 – 2021年12月*
 
-Dexter 是一款智能机器人，专为辅助教育工作者设计，它可以轻松地完成清洁白板、绘制图表和表格模板以及拍摄白板上重要内容照片等任务。
+- 开发移动端应用，通过设备内置机器学习和 IoT 传感器，实现实时人体活动分类。
 
-## 功能特点
+### 机器人 C++ 项目演示
 
-#### 智能化
+- 演示项目展示先进的机器人技术与应用，详细内容请参见相关视频与代码仓库。
 
-_采用机器学习技术优化 Dexter 的清洁路径。_
+---
 
-#### 可靠性
+## 作品集
 
-_使用稳健且无缝的轨道系统，在白板上精确定位移动。_
+### Dexter – 智能辅助机器人
 
-#### 创新性
+**项目简介：**  
+Dexter 是一款专为教育工作者设计的智能机器人，能够高效完成白板清洁、图表模板绘制及白板内容拍摄等任务。
 
-_Dexter 是极少数兼具绘制和擦除功能的机器人之一。_
+**主要特点：**
 
-#### 多功能性
+- **智能导航：** 采用机器学习技术优化清洁路径，实现高效精准移动。
+- **稳定设计：** 利用稳健的轨道系统，在白板上实现准确定位。
+- **多功能性：** 除清洁外，还支持绘制图表模板及拍摄重要内容。
+- **易用性：** 界面设计简洁直观，便于快速上手与操作。
 
-_除了核心的清洁功能外，Dexter 还可以绘制图表和表格的模板，以及拍摄白板照片，供学生访问。_
+**项目链接：**
 
-#### 潜力
+- [系统](https://sdp2020.gitlab.io/group12/system)  
+- [工作原理](https://sdp2020.gitlab.io/group12/howdoesitwork)  
+- [评估](https://sdp2020.gitlab.io/group12/evaluation)  
+- [预算](https://sdp2020.gitlab.io/group12/budget)  
+- [团队](https://sdp2020.gitlab.io/group12/team)  
+- [评论](https://sdp2020.gitlab.io/group12/comments)
 
-_显然，还有空间添加其他有用的功能，例如书写、绘制草图和更多模板。_
+**设计展示：**
 
-#### 便捷性
+![白板上的 Dexter 系统](https://sdp2020.gitlab.io/group12/images/hw-dev-3.jpg)  
+![最终设计的 3D 模型](https://sdp2020.gitlab.io/group12/images/sketchup.png)  
+![Dexter 横幅](https://sdp2020.gitlab.io/group12/images/dexter.png)
 
-_我们精心设计的硬件和软件旨在使 Dexter 易于设置和使用。_
+---
 
-**“简单而干净”****“用户界面易于使用”**
+## 简历下载
 
-_用户调查的反馈。[亲自体验用户界面！](https://sdp-0xc.github.io/#)_
+- **在线查看简历：** [点击查看 PDF 简历](https://jerryzhao173985.github.io/resume.pdf)  
+- **下载简历：** [下载 PDF 文件](https://jerryzhao173985.github.io/resume.pdf)
 
-## 设计
+---
 
-下图是我们设计的原型系统，可以在二维白板上移动笔或板擦头。这展示了我们的系统如何稳健，并以最小的障碍提供最大的效率和覆盖范围，方便白板使用。通过利用计算机视觉，该系统可以自主清洁白板以及绘制用户指定的模板。
+## 联系方式
 
-![白板上的 Dexter 系统图像](https://sdp2020.gitlab.io/group12/images/hw-dev-3.jpg)
-
-下图是我们计划发布的最终系统的设计图。这个简化的设计视图展示了抬起和放下笔头的预期功能，以便在绘图和清洁模式之间切换。
-
-![最终设计的 Sketchup 3D 模型](https://sdp2020.gitlab.io/group12/images/sketchup.png)![group_banner](https://sdp2020.gitlab.io/group12/images/dexter.png)
-
-##### Dexter：智能辅助清洁和书写机器人
-
-开发了一款名为 Dexter 的智能辅助机器人，能够使用先进的机器人技术和机器学习技术执行清洁和书写任务。
-
-[访问网站](https://sdp2020.gitlab.io/group12/)
-
-![受大脑启发的机器人控制中的自组织](https://jerryzhao173985.github.io/images/2.jpg)
-
-##### 受大脑启发的机器人控制中的自组织
-
-探索了受大脑启发的机器人控制系统中的自组织原理，增强了自主行为和适应性。
-
-[阅读文章](https://medium.com/@0406/self-organization-in-robot-control-c58470886535)
-
-##### NeuroMONSTER 2021 上的行为控制自组织神经网络
-[观看视频](https://www.youtube.com/watch?v=YeHuOEX_Lso)##### 机器人控制中的自组织 - 项目介绍演示
-[观看演示](https://www.youtube.com/watch?v=adQRJWyv7Ss)
-
-![多层 DEP 神经可塑性规则](https://jerryzhao173985.github.io/images/demo1.gif)
-
-##### 多层 DEP 神经可塑性规则
-
-在六足机器人模拟中，实施了用于自组织机器人控制的多层 DEP 神经可塑性规则。
-
-[查看代码仓库](https://github.com/jerryzhao173985/DEP-Diamond)
-
-![新型 DEP 可塑性规则](https://jerryzhao173985.github.io/images/hexapod.jpg)
-
-##### 新型 DEP 可塑性规则
-
-开发了一种新型 DEP 可塑性规则，用于提升机器人系统的感觉运动智能。
-
-[查看代码仓库](https://github.com/jerryzhao173985/DEPNEW)
-
-![自组织评估 MATLAB 代码](https://jerryzhao173985.github.io/images/gait.png)
-
-##### 自组织评估 MATLAB 代码
-
-开发了 MATLAB 代码，用于基于模拟的六足机器人控制机制评估自组织。
-
-[查看代码仓库](https://github.com/jerryzhao173985/Self-organization-Evaluation-MATLAB-)
-
-![PDIoT App - Android上的人体活动检测](https://jerryzhao173985.github.io/images/pdiot.png)
-
-##### PDIoT App - Android 上的人体活动检测
-
-在 Android 平台上，使用 Respeck 传感器实现了用于人体活动检测的设备端机器学习。
-
-[查看代码仓库](https://github.com/jerryzhao173985/pdiot-app)
-
-![iOS 上的人体活动检测](https://jerryzhao173985.github.io/images/thingy.png)
-
-##### iOS 上的人体活动检测
-
-为 iOS 设备开发了使用 TensorFlowLite 和 Nordic Thingy 传感器的人体活动检测应用程序。
-
-[查看代码仓库](https://github.com/jerryzhao173985/ThingyHumanActivityIOS)
-
-![TTDS 在线论文搜索引擎](https://jerryzhao173985.github.io/images/search.gif)
-
-##### TTDS 在线论文搜索引擎
-
-开发了一款类似 Google 的在线论文搜索引擎，使用 Django 框架，提高了研究的可访问性和效率。
-
-[查看代码仓库](https://github.com/jerryzhao173985/TTDS_Paper_Search)
-
-![基于 Django 的 Heroku App 搜索引擎](https://jerryzhao173985.github.io/images/django.png)
-
-##### 基于 Django 的 Heroku App 搜索引擎
-
-实现了一个基于 Django 框架的搜索引擎 Web 应用程序，托管在 Heroku 平台上，方便高效的数据检索和管理。
-
-[查看代码仓库](https://github.com/jerryzhao173985/Django-based-Heroku-app-Search-Engine)
-
-![用于自学习的 IRL](https://jerryzhao173985.github.io/images/irl.png)
-
-##### 用于自学习的逆强化学习
-
-逆强化学习 (IRL) 方法，使智能体能够从自身或环境中的其他智能体学习，并展示了项目应用。
-
-[查看代码仓库](https://github.com/bilyons/irl-for-self-learning)
-
-![iOS 版 Code Llama 7B Instruction 模型](https://jerryzhao173985.github.io/images/13.png)
-
-##### iOS 版 Code Llama 7B Instruction 模型
-
-使用 gguf 和 mlx 在 iOS 上实现了 Code Llama 7B Instruction 模型，利用先进的 AI 模型增强了移动开发能力。
-
-[查看代码仓库](https://github.com/jerryzhao173985/Code-Llama-7B-Instruction-Model-for-iOS)
-
-![GPT-4o Vision iOS 照片应用](https://jerryzhao173985.github.io/images/14.png)
-
-##### GPT-4o Vision iOS 照片应用
-
-开发了一款定制的 iOS 照片应用，使用 GPT-4o Vision 回答用户关于照片的问题，增强了互动式用户体验。
-
-[查看代码仓库](https://github.com/jerryzhao173985/GPT-4o-Vision-iOS-Photo-app)
-
-### 简历
-
-查看简历
-[下载简历](https://jerryzhao173985.github.io/resume.pdf)
-
-### 联系方式
-
-邮箱: [jerryzhao173985@gmail.com](mailto:jerryzhao173985@gmail.com)
-
-领英: [linkedin.com/in/jerryzhao173985](https://www.linkedin.com/in/jerryzhao173985)
-
-电话: +447468192112
+- **邮箱：** [jerryzhao173985@gmail.com](mailto:jerryzhao173985@gmail.com)  
+- **领英：** [linkedin.com/in/jerryzhao173985](https://www.linkedin.com/in/jerryzhao173985)  
+- **电话：** +44 7468 192112
