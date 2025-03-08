@@ -1,7 +1,7 @@
 # Xiangrui (Jerry) Zhao 
 
 > - [**Personal Webpage**](https://jerryzhao173985.github.io)
-> - [**View Resume**](https://jerryzhao173985.github.io/resume.pdf) | [**中文简历**](https://jerryzhao173985.github.io/README-cn.md)
+> - [**View Resume**](https://jerryzhao173985.github.io/resume.pdf) | [**中文简历**](README-cn.md)
 > 
 > **Welcome!** I'm a software engineer with a passion for machine learning, robotics, and innovative technology. Explore my work, projects, and experiences below.
 
