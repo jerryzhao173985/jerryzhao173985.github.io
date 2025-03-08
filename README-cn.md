@@ -153,12 +153,12 @@ Dexter 是一款专为辅助教育工作者设计的智能机器人，能够高�
 **设计展示：**
 
 <div align="center">
-  <img src="https://sdp2020.gitlab.io/group12/images/hw-dev-3.jpg" alt="白板上的 Dexter 系统" width="500px">
+  <img src="https://sdp2020.gitlab.io/group12/images/hw-dev-3.jpg" alt="Dexter system on whiteboard" width="500px">
 </div>
 
 <div align="center">
-  <img src="https://sdp2020.gitlab.io/group12/images/sketchup.png" alt="最终设计的 3D 模型" width="500px">
-  <img src="https://sdp0xc.github.io/images/dexter.png" alt="Dexter 横幅" width="500px">
+  <img src="https://sdp2020.gitlab.io/group12/images/sketchup.png" alt="3D model of final design" width="500px">
+  <img src="https://sdp2020.gitlab.io/group12/images/dexter.png" alt="Dexter banner" width="500px">
 </div>
 
 [访问网站](https://sdp2020.gitlab.io/group12/)
