@@ -1,9 +1,9 @@
-# Xiangrui (Jerry) Zhao 
+# Xiangrui (Jerry) Zhao
 
 > - [**Personal Webpage**](https://jerryzhao173985.github.io)
 > - [**View Resume**](https://jerryzhao173985.github.io/resume.pdf) | [**中文简历**](README-cn.md)
-> 
-> **Welcome!** I'm a software engineer with a passion for machine learning, robotics, and innovative technology. Explore my work, projects, and experiences below.
+
+Welcome to my professional resume! I’m a passionate software engineer specializing in machine learning, data analysis, and robotics. Explore below to learn about my work experience, education, research, projects, and portfolio.
 
 ---
 
@@ -11,21 +11,23 @@
 
 - [About Me](#about-me)
 - [Work Experience](#work-experience)
-  - [Software Engineer II – Cadence Design Systems](#software-engineer-ii--cadence-design-systems)
-  - [Machine Learning Intern – Zonda](#machine-learning-intern--zonda)
+  - [Software Engineer II – Cadence Design Systems](#software-engineer-ii---cadence-design-systems)
+  - [Machine Learning Intern – Zonda](#machine-learning-intern---zonda)
 - [Education](#education)
 - [Technical Skills](#technical-skills)
 - [Research Experience](#research-experience)
-  - [Deep Recurrent Neural Network for Robot Behaviour Control](#self-organizing-deep-recurrent-neural-network-for-robot-behaviour-control)
-  - [Brain-inspired Robot Control](#self-organization-in-brain-inspired-robot-control)
+  - [Self-organizing Deep Recurrent Neural Network for Robot Behaviour Control](#self-organizing-deep-recurrent-neural-network-for-robot-behaviour-control)
+  - [Brain-inspired Robot Control with Self-organization](#brain-inspired-robot-control-with-self-organization)
 - [Academic Projects](#academic-projects)
-  - [Cooperative Multi-Agent Reinforcement Learning](#scalable-cooperative-multi-agent-reinforcement-learning-for-autonomous-driving)
+  - [Scalable Cooperative Multi-Agent Reinforcement Learning for Autonomous Driving](#scalable-cooperative-multi-agent-reinforcement-learning-for-autonomous-driving)
   - [Inverse Reinforcement Learning for Robotic Self-learning](#inverse-reinforcement-learning-for-robotic-self-learning)
   - [AI Paper Search Engine](#ai-paper-search-engine)
-  - [Decentralized Chess on Ethereum](#decentralized-chess-on-the-ethereum-blockchain)
-  - [Mobile Apps for Human Activity Recognition](#android-and-ios-app-development-for-human-activity-recognition)
-  - [Robotics C++ Demo](#robotics-c-project-demo)
+  - [Decentralized Chess on the Ethereum Blockchain](#decentralized-chess-on-the-ethereum-blockchain)
+  - [Android & iOS App Development for Human Activity Recognition](#android--ios-app-development-for-human-activity-recognition)
+  - [Robotics C++ Project Demo](#robotics-c-project-demo)
 - [Portfolio](#portfolio)
+  - [Dexter – Intelligent Assistive Robot](#dexter--intelligent-assistive-robot)
+  - [Additional Project Highlights](#additional-project-highlights)
 - [Resume & Downloads](#resume--downloads)
 - [Contact](#contact)
 
@@ -33,7 +35,7 @@
 
 ## About Me
 
-I am a dedicated software engineer with expertise in machine learning, data analysis, and robotics. My work focuses on designing robust, scalable, and innovative solutions that bridge cutting-edge research with real-world applications. I enjoy collaborating on diverse projects that challenge the status quo and push technological boundaries.
+I am a dedicated software engineer committed to developing innovative and efficient technology solutions. My expertise spans machine learning, data analysis, and robotics, and I strive to apply cutting-edge research to solve real-world challenges.
 
 ---
 
@@ -42,40 +44,46 @@ I am a dedicated software engineer with expertise in machine learning, data anal
 ### Software Engineer II – Cadence Design Systems  
 *May 2023 – Present*
 
-- **PDK Validation & Migration:** Developed and maintained advanced validation tools for Process Design Kits (PDKs) using C++ and SKILL. This improved quality assurance in IC design workflows.
-- **Enhanced User Experience:** Designed user-friendly UI features and streamlined batch operations with foundational APIs, resulting in improved tool performance.
-- **AI-Driven Automation:** Integrated machine learning methods to generalize PDK validation systems and automate PCell code generation—reducing test patterns and accelerating quality analysis.
-- **Collaborative Development:** Worked directly with customers to customize solutions, fix critical bugs, and ensure system designs meet evolving requirements.
+- **PDK Validation & Migration:**  
+  Developed and maintained advanced validation tools for complex Process Design Kits (PDKs) in Cadence Virtuoso using C++ and SKILL. Enhanced IC design workflows through integrated, high-quality verification and migration solutions.
+- **UI & Process Optimization:**  
+  Designed user-friendly interfaces and streamlined batch operations using foundational APIs, resulting in improved tool performance and customer satisfaction.
+- **AI-Driven Automation:**  
+  Leveraged artificial intelligence, machine learning, and data-driven methods to generalize validation systems and automate PCell code generation—reducing test patterns and speeding up quality analysis.
+- **Client Collaboration:**  
+  Worked closely with customers to implement product enhancements and resolve critical issues, ensuring system designs meet evolving requirements.
 
 ### Machine Learning Intern – Zonda  
 *Feb 2023 – May 2023*
 
-- **Text-to-3D Generation:** Developed high-fidelity models for text-to-3D object generation using GANs and Stable Diffusion techniques.
-- **State-of-the-Art Techniques:** Integrated cutting-edge methodologies from Stable-Dreamfusion, ControlNet, OpenAI's Point-E, and Pixel2Mesh to boost performance and accuracy.
-- **Optimization & Stability:** Tuned hyperparameters and employed prompt engineering (with ChatGPT) to improve model convergence and reduce instability.
-- **Cloud Integration:** Implemented a web interface for 3D generation on AWS EC2, integrating S3 storage and deploying models on AWS SageMaker with Docker.
+- **Text-to-3D Object Generation:**  
+  Developed high-fidelity models to convert text into 3D objects using GANs and Stable Diffusion, achieving accurate and textured outputs.
+- **Integration of Cutting-edge Technologies:**  
+  Incorporated advanced techniques from Stable-Dreamfusion, ControlNet, OpenAI’s Point-E, and Pixel2Mesh to significantly boost model performance.
+- **Model Optimization:**  
+  Enhanced training efficiency and convergence by fine-tuning hyperparameters with custom accuracy metrics and applying prompt engineering with ChatGPT.
+- **Cloud Deployment:**  
+  Built a web interface for 3D generation on AWS EC2, integrated S3 cloud storage, and deployed models on AWS SageMaker using Docker containers for automated resource allocation.
 
 ---
 
 ## Education
 
 ### Master of Informatics with Honours (Integrated Master) – University of Edinburgh  
-*Sep 2018 – May 2022*  
-**Achievement:** 2:1  
-**Relevant Coursework:**  
-- Reinforcement Learning  
-- Deep Learning  
-- Natural Language Processing  
-- Computer Vision and Robotics  
-- Applied Machine Learning  
-- Blockchain and Distributed Ledgers
+*Sep 2018 – May 2022*
+
+- **Achievement:** Second Class Honours, First Division (2:1)
+- **Core Courses:**  
+  Reinforcement Learning, Deep Learning, Natural Language Processing, Computer Vision & Robotics, Applied Machine Learning, Blockchain & Distributed Ledgers
 
 ---
 
 ## Technical Skills
 
-- **Languages:** Python, C++, Java, JavaScript, MATLAB, Kotlin, Swift, C#, SQL, Solidity
-- **Frameworks & Tools:** PyTorch, TensorFlow, CoreML, Django, ROS, Scikit-Learn, AWS
+- **Programming Languages:**  
+  Python, C++, Java, JavaScript, MATLAB, Kotlin, Swift, C#, SQL, Solidity
+- **Frameworks & Tools:**  
+  PyTorch, TensorFlow, CoreML, Django, ROS, Scikit-Learn, AWS
 
 ---
 
@@ -84,14 +92,14 @@ I am a dedicated software engineer with expertise in machine learning, data anal
 ### Self-organizing Deep Recurrent Neural Network for Robot Behaviour Control  
 *Sep 2021 – May 2022*
 
-- **Framework Development:** Designed a multi-layer neural network architecture for autonomous robot control.
-- **Algorithm Innovation:** Introduced novel evaluation metrics to balance exploration and exploitation, providing human-interpretable behavior insights.
+- Developed a multi-layer neural network framework for self-organizing robot control, enhancing system controllability, scalability, and self-assessment capabilities.
+- Proposed interpretable algorithms and evaluation metrics to balance exploration and exploitation in robotic behaviors.
 
-### Self-organization in Brain-inspired Robot Control  
+### Brain-inspired Robot Control with Self-organization  
 *Sep 2020 – May 2021*
 
-- **DIAMOND Model:** Proposed a deep recurrent neural network model to simulate information flow among neural assemblies.
-- **Autonomous Learning:** Implemented self-organizing learning algorithms to mimic creativity and curiosity, enabling novel self-exploratory behaviors.
+- Introduced the DIAMOND model, employing deep recurrent neural networks to simulate information flow between neural assemblies, enabling top-down guided self-organization.
+- Implemented autonomous learning algorithms within a deep homeokinesis model to simulate creativity and curiosity, facilitating novel self-exploratory behaviors.
 
 ---
 
@@ -100,37 +108,37 @@ I am a dedicated software engineer with expertise in machine learning, data anal
 ### Scalable Cooperative Multi-Agent Reinforcement Learning for Autonomous Driving  
 *Feb 2022 – May 2022*
 
-- **Collaboration in Simulation:** Developed a multi-agent deep reinforcement learning model within the CARLA simulator.
-- **Improved Safety:** Reduced collision rates and mitigated self-interested behaviors compared to single-agent setups.
+- Developed a multi-agent deep reinforcement learning model within the CARLA simulator to train cooperative behaviors.
+- Significantly reduced collision rates and selfish actions compared to single-agent baselines.
 
 ### Inverse Reinforcement Learning for Robotic Self-learning  
 *Jan 2022 – Mar 2022*
 
-- **Efficient Learning:** Designed a sample-efficient inverse reinforcement learning algorithm based on maximum entropy principles.
-- **Expert Demonstrations:** Enabled effective learning with fewer expert demonstrations.
+- Designed an efficient inverse reinforcement learning (IRL) algorithm based on maximum entropy principles.
+- Enabled agents to rapidly acquire key skills from minimal expert demonstrations.
 
 ### AI Paper Search Engine  
 *Dec 2021 – Feb 2022*
 
-- **Web-based Research Tool:** Built a search engine using JavaScript and PostgreSQL to enhance accessibility to AI research papers.
-- **NLP Integration:** Incorporated algorithms for keyword extraction, grammar correction, and query prediction.
+- Built a web-based AI research paper search engine using JavaScript and PostgreSQL.
+- Integrated natural language processing (NLP) for keyword extraction, grammar correction, and query prediction, improving academic resource retrieval.
 
 ### Decentralized Chess on the Ethereum Blockchain  
 *Nov 2021 – Jan 2022*
 
-- **Blockchain Game Development:** Created a tamper-proof decentralized chess game with Solidity smart contracts.
-- **Transparent Gameplay:** Ensured a secure, transparent game experience for all users.
+- Developed a decentralized chess game utilizing Solidity smart contracts.
+- Ensured tamper-proof and transparent gameplay experiences.
 
-### Android and iOS App Development for Human Activity Recognition  
+### Android & iOS App Development for Human Activity Recognition  
 *Sep 2021 – Dec 2021*
 
-- **Mobile Innovation:** Developed apps for real-time human activity classification using on-device machine learning and IoT sensors.
-- **Cross-Platform Solutions:** Ensured seamless functionality across both Android and iOS platforms.
+- Developed mobile applications for real-time human activity classification using on-device machine learning and IoT sensors.
+- Delivered robust performance on both Android and iOS platforms.
 
 ### Robotics C++ Project Demo
 
-- **Demonstration Video:** A showcase of advanced robotics applications developed in C++.  
-  [View Demo Video](#)
+- Demonstrated advanced robotics applications using C++, showcasing innovative control techniques and system integration.
+- Detailed demo video and code repositories are available upon request.
 
 ---
 
@@ -138,43 +146,161 @@ I am a dedicated software engineer with expertise in machine learning, data anal
 
 ### Dexter – Intelligent Assistive Robot
 
-**Overview:**  
-Dexter is an innovative robot designed to assist educators by cleaning whiteboards, drawing templates, and capturing important board content—all with minimal manual intervention.
+**Project Overview:**  
+Dexter is an innovative robot designed to assist educators by efficiently cleaning whiteboards, drawing templates, and capturing important board content.
 
 **Key Features:**
 
-- **Intelligent Navigation:** Utilizes machine learning to optimize cleaning and drawing paths.
-- **Robust Design:** Engineered with a reliable rail system for precise movement.
-- **Multifunctionality:** Capable of cleaning, drawing, and capturing high-quality images.
-- **User-Centric:** Intuitive design makes it easy to set up and integrate into daily tasks.
+- **Intelligent Navigation:**  
+  Utilizes machine learning to optimize cleaning and drawing paths for precise movement.
+- **Reliable Design:**  
+  Employs a robust rail system for accurate positioning on whiteboards.
+- **Innovative Capabilities:**  
+  Combines drawing and erasing functions for multifunctional support.
+- **User-Friendly:**  
+  Designed for easy setup and intuitive operation.
 
-**Design & Demo:**
+**Project Links:**
 
-- **System Overview:**  
-  [System Details](https://sdp2020.gitlab.io/group12/system) | [How It Works](https://sdp2020.gitlab.io/group12/howdoesitwork)
-- **Media:**  
-  ![Image of Dexter system on the whiteboard](https://sdp2020.gitlab.io/group12/images/hw-dev-3.jpg)  
-  ![Sketchup 3D model of final design](https://sdp2020.gitlab.io/group12/images/sketchup.png)  
-  ![Dexter Banner](https://sdp2020.gitlab.io/group12/images/dexter.png)
+- [System Overview](https://sdp2020.gitlab.io/group12/system)  
+- [How It Works](https://sdp2020.gitlab.io/group12/howdoesitwork)  
+- [Evaluation](https://sdp2020.gitlab.io/group12/evaluation)  
+- [Budget](https://sdp2020.gitlab.io/group12/budget)  
+- [Team](https://sdp2020.gitlab.io/group12/team)  
+- [Comments](https://sdp2020.gitlab.io/group12/comments)
 
-**Additional Media & Projects:**
+<div align="center">
+  <img src="https://sdp2020.gitlab.io/group12/images/hw-dev-3.jpg" alt="Dexter system on whiteboard" width="500px">
+</div>
 
-- **Self-Organization in Robot Control:**  
-  [Read Article](https://medium.com/@0406/self-organization-in-robot-control-c58470886535)  
-  ![Self-Organization](https://jerryzhao173985.github.io/images/2.jpg)
-- **Neural Network Demo Videos:**  
-  [Watch Video](https://www.youtube.com/watch?v=YeHuOEX_Lso) | [Watch Demo](https://www.youtube.com/watch?v=adQRJWyv7Ss)  
-  ![Multi-layer DEP Neural Plasticity](https://jerryzhao173985.github.io/images/demo1.gif)
-- **Additional Projects:**  
-  Check out my repositories for DEP Plasticity, mobile apps, reinforcement learning projects, and more on [GitHub](https://github.com/jerryzhao173985).
+<div align="center">
+  <img src="https://sdp2020.gitlab.io/group12/images/sketchup.png" alt="3D model of final design" width="500px">
+  <img src="https://sdp2020.gitlab.io/group12/images/dexter.png" alt="Dexter banner" width="500px">
+</div>
+
+[Visit Project Website](https://sdp2020.gitlab.io/group12/)
+
+---
+
+### Additional Project Highlights
+
+#### Brain-inspired Self-organization in Robot Control
+
+- **Overview:**  
+  Explores how brain-inspired self-organization principles can enhance robotic control and autonomy.
+- **Learn More:** [Read the Article](https://medium.com/@0406/self-organization-in-robot-control-c58470886535)
+<div align="center">
+  <img src="https://jerryzhao173985.github.io/images/2.jpg" alt="Brain-inspired self-organization" width="500px">
+</div>
+
+#### NeuroMONSTER 2021 – Self-organizing Neural Network for Behaviour Control
+
+- **Overview:**  
+  Showcased at NeuroMONSTER 2021, this project demonstrates self-organizing neural network techniques for controlling robot behavior.
+- **Watch Video:** [View Video](https://www.youtube.com/watch?v=YeHuOEX_Lso)
+
+#### Project Introduction Demo for Self-organization in Robot Control
+
+- **Overview:**  
+  A detailed demo highlighting the implementation of self-organization in robotic systems.
+- **Watch Demo:** [View Demo](https://www.youtube.com/watch?v=adQRJWyv7Ss)
+
+#### Multi-layer DEP Neural Plasticity Rule
+
+- **Overview:**  
+  Implemented in a hexapod simulation to enhance robot control via multi-layer neural plasticity.
+- **Code Repository:** [View on GitHub](https://github.com/jerryzhao173985/DEP-Diamond)
+<div align="center">
+  <img src="https://jerryzhao173985.github.io/images/demo1.gif" alt="Multi-layer DEP Neural Plasticity" width="500px">
+</div>
+
+#### Novel DEP Plasticity Rule
+
+- **Overview:**  
+  Developed to improve sensorimotor intelligence in robotic systems.
+- **Code Repository:** [View on GitHub](https://github.com/jerryzhao173985/DEPNEW)
+<div align="center">
+  <img src="https://jerryzhao173985.github.io/images/hexapod.jpg" alt="Novel DEP Plasticity Rule" width="500px">
+</div>
+
+#### Self-organization Evaluation using MATLAB
+
+- **Overview:**  
+  MATLAB code designed to evaluate self-organization in hexapod control mechanisms.
+- **Code Repository:** [View on GitHub](https://github.com/jerryzhao173985/Self-organization-Evaluation-MATLAB-)
+<div align="center">
+  <img src="https://jerryzhao173985.github.io/images/gait.png" alt="Self-organization Evaluation MATLAB" width="500px">
+</div>
+
+#### PDIoT App – Android-based Human Activity Detection
+
+- **Overview:**  
+  An Android application that uses Respeck sensors and on-device machine learning for real-time activity detection.
+- **Code Repository:** [View on GitHub](https://github.com/jerryzhao173985/pdiot-app)
+<div align="center">
+  <img src="https://jerryzhao173985.github.io/images/pdiot.png" alt="PDIoT App" width="500px">
+</div>
+
+#### iOS Human Activity Detection
+
+- **Overview:**  
+  Developed an iOS application with TensorFlowLite and Nordic Thingy sensors for effective human activity classification.
+- **Code Repository:** [View on GitHub](https://github.com/jerryzhao173985/ThingyHumanActivityIOS)
+<div align="center">
+  <img src="https://jerryzhao173985.github.io/images/thingy.png" alt="iOS Human Activity Detection" width="500px">
+</div>
+
+#### TTDS Online Paper Search Engine
+
+- **Overview:**  
+  A Google-like online paper search engine built with Django and enhanced with NLP for improved academic research accessibility.
+- **Code Repository:** [View on GitHub](https://github.com/jerryzhao173985/TTDS_Paper_Search)
+<div align="center">
+  <img src="https://jerryzhao173985.github.io/images/search.gif" alt="TTDS Online Paper Search Engine" width="500px">
+</div>
+
+#### Django-based Heroku App Search Engine
+
+- **Overview:**  
+  A Django-based search engine web application hosted on Heroku, designed for efficient data retrieval and management.
+- **Code Repository:** [View on GitHub](https://github.com/jerryzhao173985/Django-based-Heroku-app-Search-Engine)
+<div align="center">
+  <img src="https://jerryzhao173985.github.io/images/django.png" alt="Django-based Heroku App Search Engine" width="500px">
+</div>
+
+#### Inverse Reinforcement Learning for Self-learning
+
+- **Overview:**  
+  An IRL approach that enables agents to learn from their own experiences or from other agents.
+- **Code Repository:** [View on GitHub](https://github.com/bilyons/irl-for-self-learning)
+<div align="center">
+  <img src="https://jerryzhao173985.github.io/images/irl.png" alt="Inverse Reinforcement Learning for Self-learning" width="500px">
+</div>
+
+#### iOS Code Llama 7B Instruction Model
+
+- **Overview:**  
+  Implementation of the Code Llama 7B Instruction Model on iOS using gguf and mlx to enhance mobile AI capabilities.
+- **Code Repository:** [View on GitHub](https://github.com/jerryzhao173985/Code-Llama-7B-Instruction-Model-for-iOS)
+<div align="center">
+  <img src="https://jerryzhao173985.github.io/images/13.png" alt="iOS Code Llama 7B Instruction Model" width="500px">
+</div>
+
+#### GPT-4o Vision iOS Photo App
+
+- **Overview:**  
+  A custom iOS photo application that leverages GPT-4o Vision to intelligently answer user questions about their photos.
+- **Code Repository:** [View on GitHub](https://github.com/jerryzhao173985/GPT-4o-Vision-iOS-Photo-app)
+<div align="center">
+  <img src="https://jerryzhao173985.github.io/images/14.png" alt="GPT-4o Vision iOS Photo App" width="500px">
+</div>
 
 ---
 
 ## Resume & Downloads
 
-- **View Online Resume:** [Resume (PDF)](https://jerryzhao173985.github.io/resume.pdf)
+- **View Online Resume:** [Online PDF](https://jerryzhao173985.github.io/resume.pdf)
 - **Download Resume:** [Download PDF](https://jerryzhao173985.github.io/resume.pdf)
-- *(For a Chinese version of my resume, please refer to the README-cn.md file in this repository.)*
 
 ---
 
@@ -183,7 +309,3 @@ Dexter is an innovative robot designed to assist educators by cleaning whiteboar
 - **Email:** [jerryzhao173985@gmail.com](mailto:jerryzhao173985@gmail.com)
 - **LinkedIn:** [linkedin.com/in/jerryzhao173985](https://www.linkedin.com/in/jerryzhao173985)
 - **Phone:** +44 7468 192112
-
----
-
-*Thank you for visiting my profile! Feel free to explore my projects and reach out for collaborations or further inquiries.*
